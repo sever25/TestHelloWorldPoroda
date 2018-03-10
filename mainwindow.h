@@ -5,6 +5,8 @@
 #include <QMainWindow>
 #include <QPushButton>
 #include <QMessageBox>
+#include <QLabel>
+
 
 namespace Ui {
 class MainWindow;
@@ -45,12 +47,13 @@ private slots:
     void button_DdobroFalse_clicked();
     void button_Dbolee50sm_clicked();
     void button_Dmenee70sm_clicked();
+    void button_Dbolee70sm_clicked();
     void button_Ddlinie_clicked();
     void button_Dkorotkie_clicked();
-    void button_DOkrasrizhsotmFalse_clicked();
+    void button_DOkrasbelosnezhn_clicked();
     void button_DbelFalse_clicked();
     void button_DbelTrue_clicked();
-    void button_DOkrasrizhsotmTrue();
+    void button_DOkrasrizhsotmTrue_clicked();
 
 
 
@@ -106,6 +109,10 @@ private:
 
     //Рестарт
     QPushButton *restart_button = new QPushButton();
+
+
+    //Вопросы
+    QLabel *question = new QLabel();
 
 
 

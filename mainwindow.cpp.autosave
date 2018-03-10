@@ -155,10 +155,10 @@ void MainWindow:: button_start_clicked()
     buttonClose->hide();
     buttonStart->hide();
     question->setText("Какая собака: длиношерстная или короткошерстная?");
-    button_korotkosherstnaya->setGeometry(135,90,145,40);
+    button_korotkosherstnaya->setGeometry(130,90,145,40);
     button_korotkosherstnaya->setText("Короткошерстная собака");
     button_korotkosherstnaya->show();
-    button_dlinosherstnaya->setGeometry(135,140,145,40);
+    button_dlinosherstnaya->setGeometry(130,140,145,40);
     button_dlinosherstnaya->setText("Длинношерстная собака");
     button_dlinosherstnaya->show();
 
@@ -380,7 +380,7 @@ void MainWindow:: button_DdobroFalse_clicked()
      button_Dmenee70sm->setGeometry(135,90,145,40);
      button_Dmenee70sm->setText("Менее 70см"); //Добавить сигнал
      button_Dmenee70sm->show();
-     button_Dbolee70sm->setGeometry(135,140,145,40);
+     button_Dbolee70sm->setGeometry(15,140,145,40);
      button_Dbolee70sm->setText("Более 70см"); //Добавить сигнал
      button_Dbolee70sm->show();
 
