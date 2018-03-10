@@ -40,18 +40,17 @@ private slots:
 
 
     void button_dlinosherstnaya_clicked();
-        void button_Dmenee50sm_clicked();
-        void button_DdobroTrue_clicked();
-        void button_DdobroFalse_clicked();
-
+    void button_Dmenee50sm_clicked();
+    void button_DdobroTrue_clicked();
+    void button_DdobroFalse_clicked();
     void button_Dbolee50sm_clicked();
-        void button_Dmenee70sm_clicked();
-            void button_Ddlinie_clicked();
-            void button_Dkorotkie_clicked();
-         void button_DOkrasrizhsotmFalse_clicked();
-            void button_DbelFalse_clicked();
-            void button_DbelTrue_clicked();
-         void button_DOkrasrizhsotmTrue();
+    void button_Dmenee70sm_clicked();
+    void button_Ddlinie_clicked();
+    void button_Dkorotkie_clicked();
+    void button_DOkrasrizhsotmFalse_clicked();
+    void button_DbelFalse_clicked();
+    void button_DbelTrue_clicked();
+    void button_DOkrasrizhsotmTrue();
 
 
 
@@ -65,22 +64,21 @@ private:
 
     //Короткошерстная собака
     QPushButton *button_korotkosherstnaya = new QPushButton();
-
         //Каков рост собаки
         QPushButton *button_menee50sm = new QPushButton();
         QPushButton *button_bolee50sm = new QPushButton();
         //У собаки короткий или длинный хвост
-            QPushButton *button_korotkiy = new QPushButton(); //Английский бульдог
-            QPushButton *button_dlinniy = new QPushButton();
-            //Длинные или короткие уши у собаки
-                QPushButton *button_ushidlinnie = new QPushButton(); //Гончая
-                QPushButton *button_ushikorotkie = new QPushButton();
-                //Тело длинное или короткое
-                    QPushButton *button_telodlinnoe = new QPushButton(); //Мопс
-                    QPushButton *button_telokorotkoe = new QPushButton(); //Чихуахуа
-             //Собака весит более или менее 50кг
-            QPushButton *button_vesbolee = new QPushButton();
-            QPushButton *button_vesmenee = new QPushButton();
+        QPushButton *button_korotkiy = new QPushButton(); //Английский бульдог
+        QPushButton *button_dlinniy = new QPushButton();
+        //Длинные или короткие уши у собаки
+        QPushButton *button_ushidlinnie = new QPushButton(); //Гончая
+        QPushButton *button_ushikorotkie = new QPushButton();
+        //Тело длинное или короткое
+        QPushButton *button_telodlinnoe = new QPushButton(); //Мопс
+        QPushButton *button_telokorotkoe = new QPushButton(); //Чихуахуа
+        //Собака весит более или менее 50кг
+        QPushButton *button_vesbolee = new QPushButton();
+        QPushButton *button_vesmenee = new QPushButton();
 
 
     //Длиношерстная собака

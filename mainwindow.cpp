@@ -107,6 +107,8 @@ button_korotkosherstnaya = new QPushButton(this);
     connect(button_telokorotkoe,SIGNAL(clicked()),this,SLOT(button_telokorotkoe_clicked()));
     connect(button_telodlinnoe,SIGNAL(clicked()),this,SLOT(button_telodlinnoe_clicked()));
     connect(restart_button,SIGNAL(clicked()),this,SLOT(button_rest_clicked()));
+
+    connect(button_dlinosherstnaya,SIGNAL(clicked()),this,SLOT(button_dlinosherstnaya_clicked()));
 }
 
 MainWindow::~MainWindow()
@@ -285,7 +287,14 @@ void  MainWindow:: button_telodlinnoe_clicked()
 
  void MainWindow:: button_dlinosherstnaya_clicked()
  {
-
+     button_korotkosherstnaya->hide();
+     button_dlinosherstnaya->hide();
+     button_Dmenee50sm->setGeometry(135,90,145,40);
+     button_Dmenee50sm->setText("Менее 50см");
+     button_Dmenee50sm->show();
+     button_Dbolee50sm->setGeometry(135,140,145,40);
+     button_Dbolee50sm->setText("Более 50см");
+     button_Dbolee50sm->show();
 
 
  }
