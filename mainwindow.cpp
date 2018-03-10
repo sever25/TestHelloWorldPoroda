@@ -7,43 +7,74 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-
+//Кнопки this
     restart_button = new QPushButton(this);
-    button_korotkosherstnaya = new QPushButton(this);
-    button_dlinosherstnaya = new QPushButton(this);
+//Короткошерстная
+button_korotkosherstnaya = new QPushButton(this);
     //Каков рост собаки
     button_menee50sm = new QPushButton(this);
     //У собаки короткий или длинный хвост
-        button_korotkiy = new QPushButton(this); //Английский бульдог
+    button_korotkiy = new QPushButton(this); //Английский бульдог
+    button_dlinniy = new QPushButton(this);
+    //Длинные или короткие уши у собаки
+    button_ushidlinnie = new QPushButton(this); //Гончая
+    button_ushikorotkie = new QPushButton(this);
+    //Тело длинное или короткое
+    button_telodlinnoe = new QPushButton(this); //Мопс
+    button_telokorotkoe = new QPushButton(this); //Чихуахуа
+    button_bolee50sm = new QPushButton(this);
+    //Собака весит более или менее 50кг
+    button_vesbolee = new QPushButton(this);
+    button_vesmenee = new QPushButton(this);
 
-        button_dlinniy = new QPushButton(this);
-        //Длинные или короткие уши у собаки
-            button_ushidlinnie = new QPushButton(this); //Гончая
-            button_ushikorotkie = new QPushButton(this);
-                //Тело длинное или короткое
-                    button_telodlinnoe = new QPushButton(this); //Мопс
-                    button_telokorotkoe = new QPushButton(this); //Чихуахуа
 
+//Длиношерстная собака
+ button_dlinosherstnaya = new QPushButton(this);
+    //Каков рост собаки: менее 50см или более
+     button_Dmenee50sm = new QPushButton(this);
+     button_Dbolee50sm = new QPushButton(this);
+    //У собаки доброжелательный характер?
+     button_Ddobraya = new QPushButton(this);
+     button_Dnedobraya = new QPushButton(this);
+    //У собаки рост менее 70 см или более
+     button_Dmenee70sm = new QPushButton(this);
+     button_Dbolee70sm = new QPushButton(this);
+    //Длинные или короткие уши у собаки
+     button_Ddlinnie = new QPushButton(this);
+     button_Dkorotkie = new QPushButton(this);
+    //Окрас рыжий с белыми отметинами
+     button_DbelotmetiniFalse = new QPushButton(this);
+     button_DbelotmetiniTrue = new QPushButton(this);
+    //Белоснежный окрас
+     button_DbelosnezhTrue = new QPushButton(this);
+     button_DbelosnezhFalse = new QPushButton(this);
 
-        button_bolee50sm = new QPushButton(this);
-        //Собака весит более или менее 50кг
-            button_vesbolee = new QPushButton(this);
-            button_vesmenee = new QPushButton(this);
-
-            //Скрываем кнопки, (лень лезть в библиотеку менять конструктор, сломаю чего) :)
-            button_dlinosherstnaya->hide();
+            //Скрываем кнопки, (лень лезть в библиотеку менять конструктор) :)
             button_korotkosherstnaya->hide();
             button_menee50sm->hide();
             button_korotkiy->hide();
-                     button_dlinniy->hide();
-                     button_ushidlinnie->hide();
-                    button_ushikorotkie->hide();
-                     button_telodlinnoe->hide();
-                     button_telokorotkoe->hide();
-                      button_bolee50sm->hide();
-                      button_vesbolee->hide();
-                     button_vesmenee->hide();
-                     restart_button->hide();
+            button_dlinniy->hide();
+            button_ushidlinnie->hide();
+            button_ushikorotkie->hide();
+            button_telodlinnoe->hide();
+            button_telokorotkoe->hide();
+            button_bolee50sm->hide();
+            button_vesbolee->hide();
+            button_vesmenee->hide();
+            button_dlinosherstnaya->hide();
+            button_Dmenee50sm->hide();
+            button_Dbolee50sm->hide();
+            button_Ddobraya->hide();
+            button_Dnedobraya->hide();
+            button_Dmenee70sm->hide();
+            button_Dbolee70sm->hide();
+            button_Ddlinnie->hide();
+            button_Dkorotkie->hide();
+            button_DbelotmetiniFalse->hide();
+            button_DbelotmetiniTrue->hide();
+            button_DbelosnezhTrue->hide();
+            button_DbelosnezhFalse->hide();
+                restart_button->hide();
 
 
     buttonStart = new QPushButton(this);
@@ -66,20 +97,15 @@ MainWindow::MainWindow(QWidget *parent) :
     connect(buttonStart,SIGNAL(clicked()),this,SLOT(button_start_clicked()));
     connect(button_korotkosherstnaya,SIGNAL(clicked()),this,SLOT(button_korotkosherstnaya_clicked()));
     connect(button_bolee50sm,SIGNAL(clicked()),this,SLOT(button_bolee50sm_clicked()));
-     connect(button_vesbolee,SIGNAL(clicked()),this,SLOT(button_vesbolee_clicked()));
-     connect(button_vesmenee,SIGNAL(clicked()),this,SLOT(button_vesmenee_clicked()));
-
+    connect(button_vesbolee,SIGNAL(clicked()),this,SLOT(button_vesbolee_clicked()));
+    connect(button_vesmenee,SIGNAL(clicked()),this,SLOT(button_vesmenee_clicked()));
     connect(button_menee50sm,SIGNAL(clicked()),this,SLOT(button_menee50sm_clicked()));
-
     connect(button_korotkiy,SIGNAL(clicked()),this,SLOT(button_korotkiy_clicked()));
-
     connect(button_dlinniy,SIGNAL(clicked()),this,SLOT(button_dlinniy_clicked()));
     connect(button_ushidlinnie,SIGNAL(clicked()),this,SLOT(button_ushidlinnie_clicked()));
     connect(button_ushikorotkie,SIGNAL(clicked()),this,SLOT(button_ushikorotkie_clicked()));
-
     connect(button_telokorotkoe,SIGNAL(clicked()),this,SLOT(button_telokorotkoe_clicked()));
     connect(button_telodlinnoe,SIGNAL(clicked()),this,SLOT(button_telodlinnoe_clicked()));
-
     connect(restart_button,SIGNAL(clicked()),this,SLOT(button_rest_clicked()));
 }
 
